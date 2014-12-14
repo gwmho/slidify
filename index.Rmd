@@ -1,0 +1,87 @@
+---
+title       : Retirement Calculator
+subtitle    : Will you run out of money?
+author      : gwmho
+job         : programmer
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+
+
+---
+
+## Problem
+
+Many people do not know when they will run out of money 
+after they have retired.  The reason is that they do not have 
+good projections of their financial statuses.
+Some people have to cope with poverty,  get into debt, 
+or return back to work after retirement.
+
+
+---
+## Solution
+
+The solution is a retirement calculator.
+It allows a user to see his financial future.
+After a user enters a few pieces of personal information, 
+the application will project his investment value, income and spending each year.
+
+---
+
+## Retirement Financial Projection at Your Finger Tips
+```{r echo=FALSE }
+
+retirement.schedule <- function(i.age,i.investment,i.rincome,i.spending,rate.of.return,rate.of.inflation){
+    
+    Max.Years = 50
+    Age <- rep(0,Max.Years)
+    Investment<- rep(0,Max.Years)
+    Rincome <-  rep(0,Max.Years)
+    Spending <- rep(0,Max.Years)
+    change.in.investment <-rep(0,Max.Years)
+
+    Age[1] <- i.age
+    Investment[1] <- i.investment
+    Rincome[1] <- i.rincome
+    Spending[1] <- i.spending
+    change.in.investment[1] <-  Rincome[1]- Spending[1]
+
+    for (i in 2:Max.Years){
+        Age[i] <- Age[i-1]+1
+        Investment[i] <- (Investment[i-1] + change.in.investment[i-1]) * (1+rate.of.return) 
+        Rincome[i] <- Rincome[i-1] * (1+rate.of.inflation)
+        Spending[i] <- Spending[i-1] * (1+rate.of.inflation)
+        change.in.investment[i]= Rincome[i] - Spending[i]
+    }
+
+    temp <- data.frame(Age, Investment,Rincome, Spending)
+    names(temp)[3] <- "Retirement Income"
+    retirement.schedule <- temp
+        
+}
+
+
+output<-retirement.schedule(65,100000, 25000,30000, 0.07, 0.025)
+format(output, width= 10,scientific=FALSE)
+print(output)
+
+  
+```
+
+---
+## Conclusion
+
+
+Knowledge is power!
+
+Use retirement calculator to manage your finance for FREE.
+
+It is available at  
+
+http://gwmho.shinyio.com/retirecalc
+

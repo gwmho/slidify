@@ -1,81 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Retirement Calculator</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Retirement Calculator">
-  <meta name="author" content="gwmho">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+---
+title       : Retirement Calculator
+subtitle    : Will you run out of money?
+author      : gwmho
+job         : programmer
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
 
-  
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  
 
-</head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-        <slide class="title-slide segue nobackground">
-  <hgroup class="auto-fadein">
-    <h1>Retirement Calculator</h1>
-    <h2>Will you run out of money?</h2>
-    <p>gwmho<br/>programmer</p>
-  </hgroup>
-  <article></article>  
-</slide>
-    
 
-    <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>Problem</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Many people do not know when they will run out of money 
+---
+
+## Problem
+
+Many people do not know when they will run out of money 
 after they have retired.  The reason is that they do not have 
 good projections of their financial statuses.
 Some people have to cope with poverty,  get into debt, 
-or return back to work after retirement.</p>
+or return back to work after retirement.
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
 
-<slide class="" id="slide-2" style="background:;">
-  <hgroup>
-    <h2>Solution</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>The solution is a retirement calculator.
+---
+## Solution
+
+The solution is a retirement calculator.
 It allows a user to see his financial future.
 After a user enters a few pieces of personal information, 
-the application will project his investment value, income and spending each year.</p>
+the application will project his investment value, income and spending each year.
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+---
 
-<slide class="" id="slide-3" style="background:;">
-  <hgroup>
-    <h2>Retirement Financial Projection at Your Finger Tips</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code>##           Age Investment Retirement Income   Spending
+## Retirement Financial Projection at Your Finger Tips
+
+```
+##           Age Investment Retirement Income   Spending
 ## 1          65     100000             25000      30000
 ## 2          66     101650             25625      30750
 ## 3          67     103282             26266      31519
@@ -126,9 +87,10 @@ the application will project his investment value, income and spending each year
 ## 48        112     -74739             79792      95751
 ## 49        113     -97047             81787      98145
 ## 50        114    -121342             83832     100598
-</code></pre>
+```
 
-<pre><code>##    Age Investment Retirement Income Spending
+```
+##    Age Investment Retirement Income Spending
 ## 1   65     100000             25000    30000
 ## 2   66     101650             25625    30750
 ## 3   67     103282             26266    31519
@@ -179,70 +141,17 @@ the application will project his investment value, income and spending each year
 ## 48 112     -74739             79792    95751
 ## 49 113     -97047             81787    98145
 ## 50 114    -121342             83832   100598
-</code></pre>
+```
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+---
+## Conclusion
 
-<slide class="" id="slide-4" style="background:;">
-  <hgroup>
-    <h2>Conclusion</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Knowledge is power!</p>
 
-<p>Use retirement calculator to manage your finance for FREE.</p>
+Knowledge is power!
 
-<p>It is available at  </p>
+Use retirement calculator to manage your finance for FREE.
 
-<p><a href="http://gwmho.shinyio.com/retirecalc">http://gwmho.shinyio.com/retirecalc</a></p>
+It is available at  
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+http://gwmho.shinyio.com/retirecalc
 
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Problem'>
-         1
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Solution'>
-         2
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Retirement Financial Projection at Your Finger Tips'>
-         3
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Conclusion'>
-         4
-      </a>
-    </li>
-  </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
-</body>
-  <!-- Load Javascripts for Widgets -->
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
