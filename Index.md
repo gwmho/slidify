@@ -153,5 +153,5 @@ Use retirement calculator to manage your finance for FREE.
 
 It is available at  
 
-http://gwmho.shinyio.com/retirecalc
+http://gwmho.shinyapps.io/retirecalc
 
